@@ -5,12 +5,16 @@ class Echo
     @args = args
   end
 
-  def format_string
+  def format_input
     args.join(" ")
+  end
+
+  def print_output
+    print format_input
   end
 end
 
 if __FILE__ == $PROGRAM_NAME
   echo = Echo.new(ARGV)
-  puts echo.format_string
+  echo.print_output
 end
