@@ -1,5 +1,16 @@
-echo = Echo.new(ARGV)
+class Echo
+  attr_reader :args
 
-echo.format_string
+  def initialize(args)
+    @args = args
+  end
 
-echo.print_string
+  def format_string
+    args.join(" ")
+  end
+end
+
+if __FILE__ == $PROGRAM_NAME
+  echo = Echo.new(ARGV)
+  puts echo.format_string
+end
