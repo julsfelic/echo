@@ -5,6 +5,6 @@ class EchoTest < Minitest::Test
   def test_formats_input
     echo = Echo.new(["aa", "bb"])
 
-    assert_equal "aa bb", echo.format_input
+    assert_equal "aa bb\n", echo.format_input
   end
 end

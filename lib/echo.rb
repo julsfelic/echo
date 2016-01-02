@@ -6,7 +6,7 @@ class Echo
   end
 
   def format_input
-    args.join(" ")
+    args.join(" ") << "\n"
   end
 
   def print_output
